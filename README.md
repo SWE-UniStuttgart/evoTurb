@@ -28,9 +28,7 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
 
-The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`. 
-The turbsim source code can be found by: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim;
-The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools;
+The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`. The turbsim source code can be found by:https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim; The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools;
 
 To use evoTurb, please follow the following steps:
 
