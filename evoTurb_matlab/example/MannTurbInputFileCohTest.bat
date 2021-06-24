@@ -1,0 +1,1 @@
+mann_turb_x64.exe Mann_0d11_61_3d5_seed4 0.11 61 3.2 3 16384 8 8 4.0 4 4 false
