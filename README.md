@@ -1,5 +1,7 @@
 # evoTurb --- 4D wind field generator
 
+https://zenodo.org/badge/doi/10.5281/zenodo.5028595.svg
+
 ## 1 Introduction
 
 The evoTurb aims to generate 4D wind fields by constraining multiple independent 3D wind fields generated using the `TurbSim` or the `Mann turbulence generator (MTG)` with the user-defined longitudinal coherence. 
