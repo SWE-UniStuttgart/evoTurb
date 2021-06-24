@@ -1,6 +1,6 @@
 # evoTurb --- 4D wind field generator
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5028595.svg)](https://doi.org/10.5281/zenodo.5028595)  [Add to Citavi project by DOI] 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5028595.svg)](https://doi.org/10.5281/zenodo.5028595)
 
 ## 1 Introduction
 
