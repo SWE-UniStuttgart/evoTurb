@@ -28,7 +28,9 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
 
-The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`. The turbsim source code can be found by:https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim; The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools;
+The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim 
+
+The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
 
 To use evoTurb, please follow the following steps:
 
@@ -39,7 +41,10 @@ To use evoTurb, please follow the following steps:
 After running the main script, three folders will be created: `3DTurb_(model name)` to store the 3D wind fields, `InputFiles_(model name)` to store the corresponding input files for TurbSim or MTG, and `4DTurb_(model name)` to store the 4D wind fields.
 
 ### Run test case
-A test case is provided to verify this turbulence unfreezing method (only for matlab based code). In the "evoTurb/evoTurb_matlab/example/" folder, execute the 'TestCoherence.m', this script will generate 8 independent 4D turbulence and estimate the coherence from the simulated data. The estimated y-z plane coherence will then be compared to the analytical coherence based no specific model (IEC Kaimal or IEC Mann). Also the longitudinal coherence will be compared with the defined coherence that is used to simulate the evolving turbulence.
+
+A test case is provided to verify this turbulence unfreezing method. This is only available for the matlab version. The relevant files are included in the folder `evoTurb_matlab\example`. 
+
+To run the test case, execute the `TestCoherence.m`. This script will generate 8 independent 4D turbulent wind fields and estimate the coherence from the simulated data. Then, the estimated y-z plane coherence will be compared with the analytical coherence according to turbulence model (IEC Kaimal or IEC Mann). Also, the longitudinal coherence will be compared with the user-defined one that is used to simulate the evolving turbulence.
 
 ## 4 References
 
