@@ -4,7 +4,7 @@
 
 The evoTurb aims to generate 4D wind fields by constraining multiple independent 3D wind fields generated using the `TurbSim` or the `Mann turbulence generator (MTG)` with the user-defined longitudinal coherence. 
 
-The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download the folder `evoTurb_matlab`. If you are a Python user, please download the folder `evoTurb_python`.
+The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download `evoTurb_matlab`. If you are a Python user, please download `evoTurb_python`.
 
 ## 2 Methodology
 
@@ -24,15 +24,19 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 ## 3 Usage
 
-### General approach
+### General 
 
-1. Modify the input file for TurbSim `.inp` or MTG `.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function.
+The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
+
+The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`.
+
+To use evoTurb, please follow the following steps:
+
+1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function.
 2. Modify the configuration function: `TurbConfig(.m/.py)`
 3. Run the main script: `evoTurb(.m/.py)`
 
 After running the main script, three folders will be created: `3DTurb_(model name)` to store the 3D wind fields, `InputFiles_(model name)` to store the corresponding input files for TurbSim or MTG, and `4DTurb_(model name)` to store the 4D wind fields.
-
-The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
 
 ### Run test case
 A test case is provided to....
