@@ -1,6 +1,6 @@
 # evoTurb --- 4D wind field generator
 
-https://zenodo.org/badge/doi/10.5281/zenodo.5028595.svg
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5028595.svg)](https://doi.org/10.5281/zenodo.5028595)  [Add to Citavi project by DOI] 
 
 ## 1 Introduction
 
@@ -80,4 +80,8 @@ contact: chen@ifb.uni-stuttgart.de
 [Wind Energy Technology Institute, Flensburg University of Applied Sciences](https://hs-flensburg.de/hochschule/personen/guo)
 
 contact: feng.guo@hs-flensburg.de
+
+## 7 Citing
+
+Yiyin Chen, & Feng Guo. (2021, June 24). evoTurb v1.0.0 (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.5028595
 
