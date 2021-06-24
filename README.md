@@ -42,7 +42,9 @@ After running the main script, three folders will be created: `3DTurb_(model nam
 
 ### Run test case
 
-A test case is provided to verify this turbulence unfreezing method. This is only available for the matlab version. The relevant files are included in the folder `evoTurb_matlab\example`. 
+A test case is provided to verify this turbulence unfreezing method. This is only available for the matlab version. 
+
+All the relevant files are included in the folder `evoTurb_matlab\example`. The configuration function `CohTestConfig.m` and the input files  `TurbSimInputFileCohTest.inp` and `MannTurbInputFileCohTest.bat` have already been set up for the test case specifically. So, there is no need to adjust these files.
 
 To run the test case, execute the `TestCoherence.m`. This script will generate 8 independent 4D turbulent wind fields and estimate the coherence from the simulated data. Then, the estimated y-z plane coherence will be compared with the analytical coherence according to turbulence model (IEC Kaimal or IEC Mann). Also, the estimated longitudinal coherence will be compared with the user-defined one that is used to simulate the evolving turbulence.
 
