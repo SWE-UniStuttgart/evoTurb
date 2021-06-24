@@ -79,4 +79,3 @@ contact: chen@ifb.uni-stuttgart.de
 
 contact: feng.guo@hs-flensburg.de
 
-## 7 Citing
