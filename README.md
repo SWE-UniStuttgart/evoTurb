@@ -67,6 +67,8 @@ https://www.ifb.uni-stuttgart.de/en/research/windenergy/projects/lidar_complex/
 
 https://www.windfors.de/en/projects/lidar-complex/
 
+This research received funding from the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
+
 ## 6 Code development and maintenance
 
 </a></div><div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-1343-0654" href="https://orcid.org/0000-0002-1343-0654" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Yiyin Chen</a></div>
