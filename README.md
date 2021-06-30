@@ -6,7 +6,7 @@
 
 The evoTurb aims to generate 4D wind fields by constraining multiple independent 3D wind fields generated using the `TurbSim` or the `Mann turbulence generator (MTG)` with the user-defined longitudinal coherence. 
 
-The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download `evoTurb_matlab`. If you are a Python user, please download `evoTurb_python`.
+The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download `evoTurb_matlab`. If you are a Python user, please download `evoTurb_python`. This tool need the TurbSim or the Mann turbulence generator. If you don't have them, please download `3D wind field generator` and unzip it before running the scripts.
 
 ## 2 Methodology
 
@@ -30,9 +30,9 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
 
-The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `TurbSim`. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim 
+The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `evoTurb\3D wind field generator\TurbSim`. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim 
 
-The MTG executable, dll file, and the batch file `run.bat` are included in the folder `MannTurb`. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
+The MTG executable, dll file, and the batch file `run.bat` are included in the folder `evoTurb\3D wind field generator\MannTurb`. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
 
 To use evoTurb, please follow the following steps:
 
@@ -60,16 +60,7 @@ To run the test case, execute the `TestCoherence.m`. This script will generate 8
 
 [4] Chen, Y., Schlipf, D., & Cheng, P. W. (2021). Parameterization of wind evolution using lidar. Wind Energy Science, 6(1), 61–91. https://doi.org/10.5194/wes-6-61-2021
 
-## 5 Acknowledgement
-The Gaussian process regression models for the wind evolution model parameters (the option „Exp-GPR“ in the matlab version) were trained with the measurement data acquired from the project Lidar complex (grant no. 0325519A) funded by the German Federal Ministry for Economic Affairs and Energy (BMWi). This project was aimed at the development of lidar technologies for detecting wind field structures with regard to optimising wind energy use in mountainous-complex terrain. For more details, please refer to:
-
-https://www.ifb.uni-stuttgart.de/en/research/windenergy/projects/lidar_complex/
-
-https://www.windfors.de/en/projects/lidar-complex/
-
-This research received funding from the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
-
-## 6 Code development and maintenance
+## 5 Code development and maintenance
 
 </a></div><div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-1343-0654" href="https://orcid.org/0000-0002-1343-0654" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">Yiyin Chen</a></div>
 
@@ -83,7 +74,18 @@ contact: chen@ifb.uni-stuttgart.de
 
 contact: feng.guo@hs-flensburg.de
 
-## 7 Citing
+## 6 Acknowledgement
+The Gaussian process regression models for the wind evolution model parameters (the option „Exp-GPR“ in the matlab version) were trained with the measurement data acquired from the project Lidar complex (grant no. 0325519A) funded by the German Federal Ministry for Economic Affairs and Energy (BMWi). This project was aimed at the development of lidar technologies for detecting wind field structures with regard to optimising wind energy use in mountainous-complex terrain. For more details, please refer to:
+
+https://www.ifb.uni-stuttgart.de/en/research/windenergy/projects/lidar_complex/
+
+https://www.windfors.de/en/projects/lidar-complex/
+
+## 7 Financial support
+
+This research received funding from the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
+
+## 8 Citing
 
 Yiyin Chen, & Feng Guo. (2021, June 24). evoTurb v1.0.0 (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.5028595
 
