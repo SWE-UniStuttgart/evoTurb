@@ -6,7 +6,7 @@
 
 The evoTurb aims to generate 4D wind fields by constraining multiple independent 3D wind fields generated using the `TurbSim` or the `Mann turbulence generator (MTG)` with the user-defined longitudinal coherence. 
 
-The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download `evoTurb_matlab`. If you are a Python user, please download `evoTurb_python`. This tool need the TurbSim or the Mann turbulence generator. If you don't have them, please download `3D wind field generator` and unzip it before running the scripts.
+The evoTurb is available both in Matlab and Python. If you are a Matlab user, please download `evoTurb_matlab`. If you are a Python user, please download `evoTurb_python`. If you don't have TurbSim or the MTG, please download `3D wind field generator` and unzip it before running the scripts.
 
 ## 2 Methodology
 
