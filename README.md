@@ -83,7 +83,11 @@ https://www.windfors.de/en/projects/lidar-complex/
 
 ## 7 Financial support
 
-This research received funding from the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
+This research received financial support from: 
+
+- the Joint Graduate Research Training Group Windy Cities, supported by the Baden-Württemberg Ministry of Science, Research and Arts.
+
+- the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
 
 ## 8 Citing
 
