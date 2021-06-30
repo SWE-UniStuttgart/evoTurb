@@ -16,13 +16,13 @@ The evoTurb will first call TurbSim or MTG depending on users' choice to generat
 
 The longitudinal coherence is acquired from the user-defined wind evolution model. The evoTurb supports the following wind evolution models (the wind evolution model is defined by users in the configuration function `TurbConfig`):
 
-1. `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [2]. Users are supposed to define the wind evolution model parameters by themselves.
+- `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [2]. Users are supposed to define the wind evolution model parameters by themselves.
 
-2. `Exp-Simley`: uses the wind evolution model (Eq.7) in [2]. The parameterization model is acquired from LES simulations.
+- `Exp-Simley`: uses the wind evolution model (Eq.7) in [2]. The parameterization model is acquired from LES simulations.
 
-3. `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.
+- `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.
     
-4. `Exp-GPR`: uses the wind evolution model (Eq.6) and the Gaussian process regression (GPR) models case 15 for a and case 17 for b (Table5) in [4]. The GPR models are trained with measurement data from an onshore flat site (see `acknowledgement`). Due to the limitation of the training data, it is not recommended to use the GPR models for the cases where the separations between the unfrozen planes exceed 109 m. The python version does not support this option.
+- `Exp-GPR`: uses the wind evolution model (Eq.6) and the Gaussian process regression (GPR) models case 15 for a and case 17 for b (Table5) in [4]. The GPR models are trained with measurement data from an onshore flat site (see `acknowledgement`). Due to the limitation of the training data, it is not recommended to use the GPR models for the cases where the separations between the unfrozen planes exceed 109 m. The python version does not support this option.
 
 ## 3 Usage
 
