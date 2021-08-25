@@ -17,11 +17,8 @@ The evoTurb will first call TurbSim or MTG depending on users' choice to generat
 The longitudinal coherence is acquired from the user-defined wind evolution model. The evoTurb supports the following wind evolution models (the wind evolution model is defined by users in the configuration function `TurbConfig`):
 
 - `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [2]. Users are supposed to define the wind evolution model parameters by themselves.
-
 - `Exp-Simley`: uses the wind evolution model (Eq.7) in [2]. The parameterization model is acquired from LES simulations.
-
-- `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.
-    
+- `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.    
 - `Exp-GPR`: uses the wind evolution model (Eq.6) and the Gaussian process regression (GPR) models case 15 for a and case 17 for b (Table5) in [4]. The GPR models are trained with measurement data from an onshore flat site (see `acknowledgement`). Due to the limitation of the training data, it is not recommended to use the GPR models for the cases where the separations between the unfrozen planes exceed 109 m. The python version does not support this option.
 
 ## 3 Usage
@@ -30,13 +27,17 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 - The `evoTurb_matlab` obtains best performance in `Matlab 2020b` and is compatible with `Matlab 2018b`. It might also be compatible with lower versions of Matlab but no garantee.
 - The `evoTurb_python` requires `Python 3.7`.
-- The evoTurb requires either `TurbSim` or `Mann turbulence generator (MTG)`. If you have them installed, please modify the corresponding directories in the configuration function of evoTurb. If you don't have any of them, please download `3D wind field generator` which contains both TurbSim and MTG. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
+- The evoTurb requires either `TurbSim` or `Mann turbulence generator (MTG)`. If you have them installed, please modify the corresponding directories in the configuration function of evoTurb. If you don't have any of them, please download `3D wind field generator` which contains both TurbSim and MTG. The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `evoTurb\3D wind field generator\TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `evoTurb\3D wind field generator\MannTurb`. 
+
+The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim. 
+
+The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
 
 ### General workflow
 
 To use evoTurb, please follow the following steps:
 
-1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function. The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `evoTurb\3D wind field generator\TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `evoTurb\3D wind field generator\MannTurb`. 
+1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function. 
 2. Modify the configuration function: `TurbConfig(.m/.py)`
 3. Run the main script: `evoTurb(.m/.py)`
 
@@ -56,7 +57,6 @@ To run the test case, execute the `TestCoherence.m`. This script will generate 8
 ## 4 References
 
 [1] Veers, P. S. (1988). Three-Dimensional Wind Simulation (No. SAND88-0152 UC-261). Albuquerque, New Mexico. 
-
 [2] Simley, E., & Pao, L. Y. (2015). A longitudinal spatial coherence model for wind evolution based on large-eddy simulation. In 2015 American Control Conference (ACC) (pp. 3708–3714). IEEE. https://doi.org/10.1109/ACC.2015.7171906
 
 [3] Kristensen, L. (1979). On longitudinal spectral coherence. Boundary-Layer Meteorology, 16(2), 145–153. https://doi.org/10.1007/BF02350508
@@ -79,17 +79,14 @@ contact: feng.guo@hs-flensburg.de
 
 ## 6 Acknowledgement
 The Gaussian process regression models for the wind evolution model parameters (the option „Exp-GPR“ in the matlab version) were trained with the measurement data acquired from the project Lidar complex (grant no. 0325519A) funded by the German Federal Ministry for Economic Affairs and Energy (BMWi). This project was aimed at the development of lidar technologies for detecting wind field structures with regard to optimising wind energy use in mountainous-complex terrain. For more details, please refer to:
-
-https://www.ifb.uni-stuttgart.de/en/research/windenergy/projects/lidar_complex/
-
-https://www.windfors.de/en/projects/lidar-complex/
+- https://www.ifb.uni-stuttgart.de/en/research/windenergy/projects/lidar_complex/
+- https://www.windfors.de/en/projects/lidar-complex/
 
 ## 7 Financial support
 
 This research received financial support from: 
 
 - the Joint Graduate Research Training Group Windy Cities, supported by the Baden-Württemberg Ministry of Science, Research and Arts.
-
 - the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
 
 ## 8 Citing
