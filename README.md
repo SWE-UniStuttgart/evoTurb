@@ -10,7 +10,7 @@ The evoTurb is available both in Matlab and Python. If you are a Matlab user, pl
 
 ## 2 Methodology
 
-The 4D wind field simulation method is extended from the Veer’s method of 3D stochastic wind field simulation [1]. The coherence between any two points in space is assumed to be the multiplication of the lateral-vertical coherence and the longitudinal coherence.
+The 4D wind field simulation method is extended from the Veer’s method of 3D stochastic wind field simulation [1]. The coherence between any two points in space is assumed to be the multiplication of the lateral-vertical coherence and the longitudinal coherence. 
 
 The evoTurb will first call TurbSim or MTG depending on users' choice to generate 3D wind fields. Then, it will read the 3D wind fields and compute the complex Fourier coefficients. Next, it will multiply the complex Fourier coefficients with the factorization of the longitudinal coherence matrix to constitute the complex Fourier coefficients for the 4D wind field. After that, iFFT is applied to obtain the time series data of wind speed. Finally, two binary files will be exported as results: one is the turbulent wind field on the rotor plane (identified with `_rotor`, same extension as the 3D wind fields) and the other is the upstream wind field (identified with `_upstream` with extension of `.evo`). 
 
@@ -26,21 +26,24 @@ The longitudinal coherence is acquired from the user-defined wind evolution mode
 
 ## 3 Usage
 
-### General 
+### Software requirements
 
-The evoTurb has been developed in `Matlab 2019b` and `Python 3.7`.
+- The `evoTurb_matlab` obtains best performance in `Matlab 2020b` and is compatible with `Matlab 2018b`. It might also be compatible with lower versions of Matlab but no garantee.
+- The `evoTurb_python` requires `Python 3.7`.
+- The evoTurb requires either `TurbSim` or `Mann turbulence generator (MTG)`. If you have them installed, please modify the corresponding directories in the configuration function of evoTurb. If you don't have any of them, please download `3D wind field generator` which contains both TurbSim and MTG. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
 
-The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `evoTurb\3D wind field generator\TurbSim`. The TurbSim source code can be found in: https://github.com/OpenFAST/openfast/tree/main/vs-build/TurbSim 
-
-The MTG executable, dll file, and the batch file `run.bat` are included in the folder `evoTurb\3D wind field generator\MannTurb`. The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/pre-processing-tools
+### General workflow
 
 To use evoTurb, please follow the following steps:
 
-1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function.
+1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function. The TurbSim executable and the input file `TurbSimInputFileTemplate.inp` are included in the folder `evoTurb\3D wind field generator\TurbSim`. The MTG executable, dll file, and the batch file `run.bat` are included in the folder `evoTurb\3D wind field generator\MannTurb`. 
 2. Modify the configuration function: `TurbConfig(.m/.py)`
 3. Run the main script: `evoTurb(.m/.py)`
 
-After running the main script, three folders will be created: `3DTurb_(model name)` to store the 3D wind fields, `InputFiles_(model name)` to store the corresponding input files for TurbSim or MTG, and `4DTurb_(model name)` to store the 4D wind fields.
+After running the main script, three folders will be created if they don't already exist: 
+- `3DTurb_(model name)` to store the 3D wind fields 
+- `InputFiles_(model name)` to store the corresponding input files for TurbSim or MTG
+- `4DTurb_(model name)` to store the 4D wind fields
 
 ### Run test case
 
