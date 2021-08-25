@@ -15,7 +15,6 @@ The 4D wind field simulation method is extended from the Veer’s method of 3D s
 The evoTurb will first call TurbSim or MTG depending on users' choice to generate 3D wind fields. Then, it will read the 3D wind fields and compute the complex Fourier coefficients. Next, it will multiply the complex Fourier coefficients with the factorization of the longitudinal coherence matrix to constitute the complex Fourier coefficients for the 4D wind field. After that, iFFT is applied to obtain the time series data of wind speed. Finally, two binary files will be exported as results: one is the turbulent wind field on the rotor plane (identified with `_rotor`, same extension as the 3D wind fields) and the other is the upstream wind field (identified with `_upstream` with extension of `.evo`). 
 
 The longitudinal coherence is acquired from the user-defined wind evolution model. The evoTurb supports the following wind evolution models (the wind evolution model is defined by users in the configuration function `TurbConfig`):
-
 - `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [2]. Users are supposed to define the wind evolution model parameters by themselves.
 - `Exp-Simley`: uses the wind evolution model (Eq.7) in [2]. The parameterization model is acquired from LES simulations.
 - `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.    
@@ -36,7 +35,6 @@ The Mann turbulence generator is accessible from: https://www.hawc2.dk/download/
 ### General workflow
 
 To use evoTurb, please follow the following steps:
-
 1. Modify the input file for TurbSim `TurbSimInputFileTemplate.inp` or MTG `run.bat` following their instructions. No need to adjust the random seed because this will be defined in the configuration function. 
 2. Modify the configuration function: `TurbConfig(.m/.py)`
 3. Run the main script: `evoTurb(.m/.py)`
@@ -57,6 +55,7 @@ To run the test case, execute the `TestCoherence.m`. This script will generate 8
 ## 4 References
 
 [1] Veers, P. S. (1988). Three-Dimensional Wind Simulation (No. SAND88-0152 UC-261). Albuquerque, New Mexico. 
+
 [2] Simley, E., & Pao, L. Y. (2015). A longitudinal spatial coherence model for wind evolution based on large-eddy simulation. In 2015 American Control Conference (ACC) (pp. 3708–3714). IEEE. https://doi.org/10.1109/ACC.2015.7171906
 
 [3] Kristensen, L. (1979). On longitudinal spectral coherence. Boundary-Layer Meteorology, 16(2), 145–153. https://doi.org/10.1007/BF02350508
@@ -85,7 +84,6 @@ The Gaussian process regression models for the wind evolution model parameters (
 ## 7 Financial support
 
 This research received financial support from: 
-
 - the Joint Graduate Research Training Group Windy Cities, supported by the Baden-Württemberg Ministry of Science, Research and Arts.
 - the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
 
