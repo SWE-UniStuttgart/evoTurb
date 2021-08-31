@@ -83,9 +83,9 @@ The Gaussian process regression models for the wind evolution model parameters (
 
 ## 7 Financial support
 
-This research received financial support from: 
+This research has received partial funding from: 
 - the Joint Graduate Research Training Group Windy Cities, supported by the Baden-Württemberg Ministry of Science, Research and Arts.
-- the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more detail about the LIKE project.
+- the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more details about the LIKE project.
 
 ## 8 Citing
 
