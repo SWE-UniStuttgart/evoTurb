@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Chen"
+  given-names: "Yiyin"
+  orcid: "https://orcid.org/0000-0002-1343-0654"
+- family-names: "Guo"
+  given-names: "Feng"
+  orcid: "https://orcid.org/0000-0003-3275-6243"
+title: "evoTurb"
+version: v1.0.0
+doi: 10.5281/zenodo.5028595
+date-released: 2021-06-24
+url: "https://github.com/SWE-UniStuttgart/evoTurb"
