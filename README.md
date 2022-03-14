@@ -10,15 +10,15 @@ The evoTurb is available both in Matlab and Python. If you are a Matlab user, pl
 
 ## 2 Methodology
 
-The 4D wind field simulation method is extended from the Veer’s method of 3D stochastic wind field simulation [1]. The coherence between any two points in space is assumed to be the multiplication of the lateral-vertical coherence and the longitudinal coherence. 
+The 4D wind field simulation method is extended from the Veers method of 3D stochastic wind field simulation introduced in [1]. The coherence between any two points in space is assumed to be the multiplication of the lateral-vertical coherence and the longitudinal coherence. For more details regarding the methodology of 4D wind field simulation, please refer to our publication [2].
 
 The evoTurb will first call TurbSim or MTG depending on users' choice to generate 3D wind fields. Then, it will read the 3D wind fields and compute the complex Fourier coefficients. Next, it will multiply the complex Fourier coefficients with the factorization of the longitudinal coherence matrix to constitute the complex Fourier coefficients for the 4D wind field. After that, iFFT is applied to obtain the time series data of wind speed. Finally, two binary files will be exported as results: one is the turbulent wind field on the rotor plane (identified with `_rotor`, same extension as the 3D wind fields) and the other is the upstream wind field (identified with `_upstream` with extension of `.evo`). 
 
 The longitudinal coherence is acquired from the user-defined wind evolution model. The evoTurb supports the following wind evolution models (the wind evolution model is defined by users in the configuration function `TurbConfig`):
-- `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [2]. Users are supposed to define the wind evolution model parameters by themselves.
-- `Exp-Simley`: uses the wind evolution model (Eq.7) in [2]. The parameterization model is acquired from LES simulations.
-- `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [3]. This model is based on physical assumption.    
-- `Exp-GPR`: uses the wind evolution model (Eq.6) and the Gaussian process regression (GPR) models case 15 for a and case 17 for b (Table5) in [4]. The GPR models are trained with measurement data from an onshore flat site (see `acknowledgement`). Due to the limitation of the training data, it is not recommended to use the GPR models for the cases where the separations between the unfrozen planes exceed 109 m. The python version does not support this option.
+- `Exp-UserDefined`: uses the wind evolution model (Eq.4) in [3]. Users are supposed to define the wind evolution model parameters by themselves.
+- `Exp-Simley`: uses the wind evolution model (Eq.7) in [3]. The parameterization model is acquired from LES simulations.
+- `Kristensen`: uses the wind evolution model (Eq.20) and G-function (Eq.29) in [4]. This model is based on physical assumption.    
+- `Exp-GPR`: uses the wind evolution model (Eq.6) and the Gaussian process regression (GPR) models case 15 for a and case 17 for b (Table5) in [5]. The GPR models are trained with measurement data from an onshore flat site (see `acknowledgement`). Due to the limitation of the training data, it is not recommended to use the GPR models for the cases where the separations between the unfrozen planes exceed 109 m. The python version does not support this option.
 
 ## 3 Usage
 
@@ -56,11 +56,13 @@ To run the test case, execute the `TestCoherence.m`. This script will generate 8
 
 [1] Veers, P. S. (1988). Three-Dimensional Wind Simulation (No. SAND88-0152 UC-261). Albuquerque, New Mexico. 
 
-[2] Simley, E., & Pao, L. Y. (2015). A longitudinal spatial coherence model for wind evolution based on large-eddy simulation. In 2015 American Control Conference (ACC) (pp. 3708–3714). IEEE. https://doi.org/10.1109/ACC.2015.7171906
+[2] Chen, Y., Guo, F., Schlipf, D., and Cheng, P. W.: Four-dimensional wind field generation for the aeroelastic simulation of wind turbines with lidars, Wind Energ. Sci., 7, 539–558, https://doi.org/10.5194/wes-7-539-2022, 2022. 
 
-[3] Kristensen, L. (1979). On longitudinal spectral coherence. Boundary-Layer Meteorology, 16(2), 145–153. https://doi.org/10.1007/BF02350508
+[3] Simley, E., & Pao, L. Y. (2015). A longitudinal spatial coherence model for wind evolution based on large-eddy simulation. In 2015 American Control Conference (ACC) (pp. 3708–3714). IEEE. https://doi.org/10.1109/ACC.2015.7171906
 
-[4] Chen, Y., Schlipf, D., & Cheng, P. W. (2021). Parameterization of wind evolution using lidar. Wind Energy Science, 6(1), 61–91. https://doi.org/10.5194/wes-6-61-2021
+[4] Kristensen, L. (1979). On longitudinal spectral coherence. Boundary-Layer Meteorology, 16(2), 145–153. https://doi.org/10.1007/BF02350508
+
+[5] Chen, Y., Schlipf, D., & Cheng, P. W. (2021). Parameterization of wind evolution using lidar. Wind Energy Science, 6(1), 61–91. https://doi.org/10.5194/wes-6-61-2021
 
 ## 5 Code development and maintenance
 
@@ -87,7 +89,5 @@ This research has received partial funding from:
 - the Joint Graduate Research Training Group Windy Cities, supported by the Baden-Württemberg Ministry of Science, Research and Arts.
 - the European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 858358 (LIKE—Lidar Knowledge Europe). See https://www.msca-like.eu/ for more details about the LIKE project.
 
-## 8 Citing
 
-Yiyin Chen, & Feng Guo. (2021, June 24). evoTurb v1.0.0 (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.5028595
 
